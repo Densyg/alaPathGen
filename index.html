@@ -1,0 +1,98 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+
+    <title>Surfacing PathGenerator</title>
+    <meta name="description" content="To help with your surfacing workflow">
+    <meta name="author" content="Naomi Que">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="css/styles.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="row" id="row0">
+            <h1 class="title">Surfacing Path Generator</h1>
+            <p id="links">BETA</p>  
+                     
+        </div>
+        <div class="row" id="row1">
+            <p>Are you in <b>SURFACING</b>? Are you tired of clicking through folders? Look no further!</p>
+        </div>
+        <div class="row" id="input-group">
+            <form class="form-inline">
+                <label class="label-default" for="inlineFormInputName2">Name:</label>
+                <input type="text" class="form-control mb-2 mr-sm-2" id="name" onkeyup="populate()" placeholder="milford.cubicle">
+                
+                <label class="label-default" for="inlineFormInputAsset2">Asset Name:</label>
+                <input type="text" class="form-control mb-2 mr-sm-2" id="asset" onkeyup="populate()" placeholder="groundRock69">
+        
+                <label class="label-default" for="inlineFormInputVersion2">Version:</label>
+                <input type="text" class="form-control mb-2 mr-sm-2" id="version" onkeyup="populate()" placeholder="v001">
+            </form>
+        </div>
+        <div class="row row-label" >
+                <h5>SUBSTANCE PAINTER - Open model</h5>
+        </div>
+        <div class="row">
+            <input type="text" id="field_sp1" class="form-control-default col-sm-12" readonly=True 
+            value="/mnt/ala/mav/2019/jobs/s119/assets/setPiece/$ASSET/model/model/caches/abc">
+
+        </div>
+        <div class="row row-label" >
+                <h5>SUBSTANCE PAINTER - Export textures</h5>
+        </div>
+        <div class="row">
+            <input type="text" id="field_sp2"class="form-control-default col-sm-12" readonly=True onclick="copy(this.id)"
+            value="/mnt/ala/mav/2019/wip/s119/assets/setPiece/$ASSET/surfacing/textures/$NAME/substancePainter/build/$VERSION">
+            <!--<button onclick="copy('field_sp2')">copy</button>-->
+        </div>
+        <div class="row row-label" >
+                <h5>KATANA - Import textures</h5>
+        </div>
+        <div class="row">    
+            <input type="text" id="field_katana1" class="form-control-default col-sm-12" readonly=True value="/mnt/ala/mav/2019/wip/s119/assets/setPiece/$ASSET/surfacing/textures/$NAME/substancePainter/build/$VERSION">
+
+        </div>  
+        <div class="row row-label" >
+                <h5>RV - Open render</h5>
+        </div>
+        <div class="row">    
+            <input type="text" id="field_rv1" class="form-control-default col-sm-12" readonly=True value="/mnt/ala/mav/2019/wip/s119/assets/setPiece/$ASSET/surfacing/lookfiles/$NAME/katana/renders/default/$VERSION/primary/beauty/1920x1080/acescg/exr">
+
+        </div>
+        
+    </div>
+    
+    
+    
+<!--
+    <div class="row text-left">
+       
+        <div class="col-sm">
+            <table id="links" style="width: 70%">
+                <tr><td>/mnt/ala/mav/2019/jobs/s119/assets/setPiece/<b>${asset}</b>/model/model/caches/abc</td></tr>
+                <tr><td>/mnt/ala/mav/2019/wip/s119/assets/setPiece/<b>${asset}</b>/surfacing/textures/<b>${name}</b>/substancePainter/build/<b>${version}</b></tr></td>
+                <tr><td>/mnt/ala/mav/2019/wip/s119/assets/setPiece/<b>${asset}</b>b/surfacing/textures/<b>${name}</b>/substancePainter/build/<b>${version}</b></tr></td>
+                <tr><td>/mnt/ala/mav/2019/wip/s119/assets/setPiece/<b>${asset}</b>/surfacing/lookfiles/<b>${name}</b>/katana/renders/default/<b>${version}</b>/primary/beauty/1920x1080/acescg/exr</tr></td>
+            </table>
+        </div>
+
+    </div>
+-->
+
+
+    <script src="js/scripts.js"></script>
+    <!-- Bootstrap scripts-->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+</body>
+</html>

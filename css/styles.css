@@ -1,0 +1,43 @@
+label{
+    padding-right: 10px;
+    color: teal;
+}
+
+.row-label{
+    padding-top: 30px;
+}
+
+#row0{
+    padding: 30px 0px 0px 0px;
+    text-align: center;
+}
+
+#row1{
+
+    margin: 10px 0px 0px 0px;
+    text-align: center;
+}
+
+#input-group{
+    margin: 20px 0px 0px 0px;
+}
+
+input[readonly]{
+    background-color: rgb(252, 252, 252);
+    border-radius: 3px;
+    border-width: thin;
+    margin: 4px 2px;
+    padding: 16px 32px;
+    transition: 0.3s;
+}
+
+input[readonly]:hover{
+    background-color: rgb(226, 255, 253);
+
+}
+
+
+
+.title{
+    align-content: center;
+}
