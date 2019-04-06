@@ -24,48 +24,62 @@
                      
         </div>
         <div class="row" id="row1">
-            <p>Are you in <b>SURFACING</b>? Are you tired of clicking through folders? Look no further!</p>
+            <p>Are you in <b>S U R F A C I N G</b>? Are you tired of <b>clicking through folders</b>? <i>We gotchu fam.</i></p>
         </div>
         <div class="row" id="input-group">
             <form class="form-inline">
-                <label class="label-default" for="inlineFormInputName2">Name:</label>
-                <input type="text" class="form-control mb-2 mr-sm-2" id="name" onkeyup="populate()" placeholder="milford.cubicle">
                 
                 <label class="label-default" for="inlineFormInputAsset2">Asset Name:</label>
                 <input type="text" class="form-control mb-2 mr-sm-2" id="asset" onkeyup="populate()" placeholder="groundRock69">
         
                 <label class="label-default" for="inlineFormInputVersion2">Version:</label>
                 <input type="text" class="form-control mb-2 mr-sm-2" id="version" onkeyup="populate()" placeholder="v001">
+
+                <label class="label-default" for="inlineFormInputName2">Author:</label>
+                <input type="text" class="form-control mb-2 mr-sm-2" id="name" onkeyup="populate()" placeholder="milford.cubicle">
+                
             </form>
         </div>
         <div class="row row-label" >
                 <h5>SUBSTANCE PAINTER - Open model</h5>
+                <label class="notcopied" id="copied1">Copied!</label>
         </div>
         <div class="row">
-            <input type="text" id="field_sp1" class="form-control-default col-sm-12" readonly=True 
+            <input type="text" id="field_sp1" class="form-control-default col-sm-12" readonly=True onclick="copyToClipboard(this.id)"
             value="/mnt/ala/mav/2019/jobs/s119/assets/setPiece/$ASSET/model/model/caches/abc">
+            
 
         </div>
         <div class="row row-label" >
                 <h5>SUBSTANCE PAINTER - Export textures</h5>
+                <label class="notcopied" id="copied2">Copied!</label>
         </div>
         <div class="row">
-            <input type="text" id="field_sp2"class="form-control-default col-sm-12" readonly=True onclick="copy(this.id)"
+            <input type="text" id="field_sp2"class="form-control-default col-sm-12" readonly=True onclick="copyToClipboard(this.id)"
             value="/mnt/ala/mav/2019/wip/s119/assets/setPiece/$ASSET/surfacing/textures/$NAME/substancePainter/build/$VERSION">
+            
+
             <!--<button onclick="copy('field_sp2')">copy</button>-->
         </div>
         <div class="row row-label" >
                 <h5>KATANA - Import textures</h5>
+                <label class="notcopied" id="copied3">Copied!</label>
         </div>
         <div class="row">    
-            <input type="text" id="field_katana1" class="form-control-default col-sm-12" readonly=True value="/mnt/ala/mav/2019/wip/s119/assets/setPiece/$ASSET/surfacing/textures/$NAME/substancePainter/build/$VERSION">
+            <input type="text" id="field_katana1" class="form-control-default col-sm-12" readonly=True onclick="copyToClipboard(this.id)"
+            value="/mnt/ala/mav/2019/wip/s119/assets/setPiece/$ASSET/surfacing/textures/$NAME/substancePainter/build/$VERSION">
+            
+
 
         </div>  
         <div class="row row-label" >
                 <h5>RV - Open render</h5>
+                <label class="notcopied" id="copied4">Copied!</label>
         </div>
         <div class="row">    
-            <input type="text" id="field_rv1" class="form-control-default col-sm-12" readonly=True value="/mnt/ala/mav/2019/wip/s119/assets/setPiece/$ASSET/surfacing/lookfiles/$NAME/katana/renders/default/$VERSION/primary/beauty/1920x1080/acescg/exr">
+            <input type="text" id="field_rv1" class="form-control-default col-sm-12" readonly=True onclick="copyToClipboard(this.id)"
+            value="/mnt/ala/mav/2019/wip/s119/assets/setPiece/$ASSET/surfacing/lookfiles/$NAME/katana/renders/default/$VERSION/primary/beauty/1920x1080/acescg/exr">
+            
 
         </div>
         

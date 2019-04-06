@@ -26,14 +26,35 @@ input[readonly]{
     background-color: rgb(252, 252, 252);
     border-radius: 3px;
     border-width: thin;
-    margin: 4px 2px;
-    padding: 16px 32px;
+    padding: 16px;
     transition: 0.3s;
 }
 
 input[readonly]:hover{
     background-color: rgb(226, 255, 253);
 
+}
+
+.notcopied{
+    font-weight: bold;
+    color: white;
+    transition: 0.6s;
+    padding-left: 50px;
+}
+.copied{
+    font-weight: bold;
+    color: green;
+    transition: 0.8s;
+    padding-left: 20px;
+}
+
+input-normal{
+    background-color: rgb(252, 252, 252);
+    border-radius: 3px;
+    border-width: thin;
+    margin: 4px 2px;
+    padding: 16px 32px;
+    transition: 0.3s;
 }
 
 

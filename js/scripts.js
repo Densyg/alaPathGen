@@ -8,13 +8,44 @@ function hello() {
     links.innerHTML = 'Hello it is I, js';
 }
 
-function copy(id) {
-    //alert('Found' + id);
-    var copyText = Document.getElementById(id);
-    copyText.select();
+
+// Stolen from https://hackernoon.com/copying-text-to-clipboard-with-javascript-df4d4988697f
+const copyToClipboard = id => {
+    var toCopy = document.getElementById(id);
+    
+    const el = document.createElement('textarea');
+    el.value = toCopy.value;
+    el.setAttribute('readonly', '');
+    el.style.position = 'absolute';
+    el.style.left = '-9999px';
+    document.body.appendChild(el);
+    el.select();
     document.execCommand('copy');
-    alert('copied text');
+    document.body.removeChild(el);
+    
+    var label = 'copied1'; 
+    if (id === 'field_sp1') {
+        label = 'copied1';
+    }
+    else if (id === "field_sp2") label = 'copied2';
+    else if (id === "field_katana1") label = 'copied3';
+    else if (id === "field_rv1") label = 'copied4';
+
+    var copyLabel = document.getElementById(label);
+    copyLabel.className = "copied";
+    setTimeout(function(){
+        copyLabel.className = "notcopied";
+        
+    }, 1200); 
+
+  };
+
+function copyTransition(id){
+
+
+
 }
+
 
 function populate() {
     var name=document.getElementById('name').value;
