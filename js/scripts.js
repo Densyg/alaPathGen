@@ -50,6 +50,7 @@ function copyTransition(id){
 function populate() {
     var name=document.getElementById('name').value;
     var asset=document.getElementById('asset').value;
+    var assetType=document.getElementById('assetType').value;
     var version=document.getElementById('version').value;
     var links=document.getElementById('links');
     var field_sp1 = document.getElementById('field_sp1');
@@ -68,14 +69,17 @@ function populate() {
     if (asset === '') {
         asset='$ASSET';
     }
+    if (assetType === '') {
+        asset='$ASSET_TYPE';
+    }
     if (version === '') {
         version='$VERSION';
     }
     var str = "";
-    var spImport = `/mnt/ala/mav/2019/jobs/s119/assets/setPiece/${asset}/model/model/caches/abc`;
-    var spExport = `/mnt/ala/mav/2019/wip/s119/assets/setPiece/${asset}/surfacing/textures/${name}/substancePainter/build/${version}`;
-    var katanaExport = `/mnt/ala/mav/2019/wip/s119/assets/setPiece/${asset}/surfacing/textures/${name}/substancePainter/build/${version}`;
-    var rvOpen = `/mnt/ala/mav/2019/wip/s119/assets/setPiece/${asset}/surfacing/lookfiles/${name}/katana/renders/default/${version}/primary/beauty/1920x1080/acescg/exr`;
+    var spImport = `/mnt/ala/mav/2019/jobs/s119/assets/${assetType}/${asset}/model/model/caches/abc`;
+    var spExport = `/mnt/ala/mav/2019/wip/s119/assets/${assetType}/${asset}/surfacing/textures/${name}/substancePainter/build/${version}`;
+    var katanaExport = `/mnt/ala/mav/2019/wip/s119/assets/${assetType}/${asset}/surfacing/textures/${name}/substancePainter/build/${version}`;
+    var rvOpen = `/mnt/ala/mav/2019/wip/s119/assets/${assetType}/${asset}/surfacing/lookfiles/${name}/katana/renders/default/${version}/primary/beauty/1920x1080/acescg/exr`;
 
 
     //links.innerHTML = `${asset}`;

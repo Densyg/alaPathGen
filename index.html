@@ -27,18 +27,34 @@
             <p>Are you in <b>S U R F A C I N G</b>? Are you tired of <b>clicking through folders</b>? <i>We gotchu fam.</i></p>
         </div>
         <div class="row" id="input-group">
-            <form class="form-inline">
-                
+            <div class="col-sm-2">
+                <label class="label-default" for="inlineFormInputAssetType  2">Asset Type:</label>
+                <input type="text" class="form-control mb-2 mr-sm-2" id="assetType" onkeyup="populate()" placeholder="setPiece">
+            
+            </div>
+            <div class="col-sm-4">
                 <label class="label-default" for="inlineFormInputAsset2">Asset Name:</label>
                 <input type="text" class="form-control mb-2 mr-sm-2" id="asset" onkeyup="populate()" placeholder="groundRock69">
         
+            </div>
+            <div class="col-sm-2">
+        
+        
+        
+                <label class="label-default" for="inlineFormInputName2">Author:</label>
+                <input type="text" class="form-control mb-2 mr-sm-2" id="name" onkeyup="populate()" placeholder="milford.cubicle">
+            </div>
+            <div class="col-sm-2">
                 <label class="label-default" for="inlineFormInputVersion2">Version:</label>
                 <input type="text" class="form-control mb-2 mr-sm-2" id="version" onkeyup="populate()" placeholder="v001">
 
-                <label class="label-default" for="inlineFormInputName2">Author:</label>
-                <input type="text" class="form-control mb-2 mr-sm-2" id="name" onkeyup="populate()" placeholder="milford.cubicle">
-                
-            </form>
+            </div>
+
+        </div>        
+        <div class="row" id="input-group">
+            
+        
+
         </div>
         <div class="row row-label" >
                 <h5>SUBSTANCE PAINTER - Open model</h5>
@@ -46,7 +62,7 @@
         </div>
         <div class="row">
             <input type="text" id="field_sp1" class="form-control-default col-sm-12" readonly=True onclick="copyToClipboard(this.id)"
-            value="/mnt/ala/mav/2019/jobs/s119/assets/setPiece/$ASSET/model/model/caches/abc">
+            value="/mnt/ala/mav/2019/jobs/s119/assets/$ASSET_TYPE/$ASSET/model/model/caches/abc">
             
 
         </div>
@@ -56,7 +72,7 @@
         </div>
         <div class="row">
             <input type="text" id="field_sp2"class="form-control-default col-sm-12" readonly=True onclick="copyToClipboard(this.id)"
-            value="/mnt/ala/mav/2019/wip/s119/assets/setPiece/$ASSET/surfacing/textures/$NAME/substancePainter/build/$VERSION">
+            value="/mnt/ala/mav/2019/wip/s119/assets/$ASSET_TYPE/$ASSET/surfacing/textures/$NAME/substancePainter/build/$VERSION">
             
 
             <!--<button onclick="copy('field_sp2')">copy</button>-->
@@ -67,7 +83,7 @@
         </div>
         <div class="row">    
             <input type="text" id="field_katana1" class="form-control-default col-sm-12" readonly=True onclick="copyToClipboard(this.id)"
-            value="/mnt/ala/mav/2019/wip/s119/assets/setPiece/$ASSET/surfacing/textures/$NAME/substancePainter/build/$VERSION">
+            value="/mnt/ala/mav/2019/wip/s119/assets/$ASSET_TYPE/$ASSET/surfacing/textures/$NAME/substancePainter/build/$VERSION">
             
 
 
@@ -78,7 +94,7 @@
         </div>
         <div class="row">    
             <input type="text" id="field_rv1" class="form-control-default col-sm-12" readonly=True onclick="copyToClipboard(this.id)"
-            value="/mnt/ala/mav/2019/wip/s119/assets/setPiece/$ASSET/surfacing/lookfiles/$NAME/katana/renders/default/$VERSION/primary/beauty/1920x1080/acescg/exr">
+            value="/mnt/ala/mav/2019/wip/s119/assets/$ASSET_TYPE/$ASSET/surfacing/lookfiles/$NAME/katana/renders/default/$VERSION/primary/beauty/1920x1080/acescg/exr">
             
 
         </div>
