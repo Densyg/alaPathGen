@@ -17,16 +17,47 @@
 </head>
 
 <body>
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="#">ALA Path Gen</a>
+        <p id="test" style="color:rgb(16, 204, 204);padding-right: 20px">BETA</p>       
+        <div class="mr-sm-2"></div>
+        
+        
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+            <li class="nav-item active mr-sm-4">
+                <a class="nav-link" href="#">Surfacing <span class="sr-only">(current)</span></a>
+            </li>
+            
+            <li class="nav-item dropdown mr-sm-4">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    R&D
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="turret2path.html">Turret2Path</a>
+                </div>
+            </li>
+            <li class="nav-item mr-sm-4">
+                    <a class="nav-link" href="#">Misc. </a>
+            </li>
+        </div>
+    </nav>
+
+
     <div class="container">
+        <!-- Title -->
         <div class="row" id="row0">
-            <h1 class="title">Surfacing Path Generator</h1>
-            <p id="links">BETA</p>  
+            <h1 class="title mx-auto">Surfacing Path Generator</h1>
+            
                      
         </div>
         <div class="row" id="row1">
-            <p>Are you in <b>S U R F A C I N G</b>? Are you tired of <b>clicking through folders</b>? <i>We gotchu fam.</i></p>
+            <p class="mx-auto">Are you in <b>S U R F A C I N G</b>? Are you tired of <b>clicking through folders</b>? <i>We gotchu fam.</i></p>
         </div>
-        <div class="row" id="input-group">
+
+        <!-- Input Fields -->
+        <div class="row justify-content-center" id="input-group">
             <div class="col-sm-2">
                 <label class="label-default" for="inlineFormInputAssetType  2">Asset Type:</label>
                 <input type="text" class="form-control mb-2 mr-sm-2" id="assetType" onkeyup="populate()" placeholder="setPiece">
@@ -51,40 +82,33 @@
             </div>
 
         </div>        
-        <div class="row" id="input-group">
-            
-        
 
-        </div>
-        <div class="row row-label" >
-                <h5>SUBSTANCE PAINTER - Open model</h5>
-                <label class="notcopied" id="copied1">Copied!</label>
+        <!-- Output Fields -->
+         <div class="row row-label" >
+            <h5>SUBSTANCE PAINTER - Open model</h5>
+            <label class="notcopied" id="copied1">Copied!</label>
         </div>
         <div class="row">
             <input type="text" id="field_sp1" class="form-control-default col-sm-12" readonly=True onclick="copyToClipboard(this.id)"
             value="/mnt/ala/mav/2019/jobs/s119/assets/$ASSET_TYPE/$ASSET_NAME/model/model/caches/abc">
-            
-
         </div>
+
         <div class="row row-label" >
-                <h5>SUBSTANCE PAINTER - Export textures</h5>
-                <label class="notcopied" id="copied2">Copied!</label>
+            <h5>SUBSTANCE PAINTER - Export textures</h5>
+            <label class="notcopied" id="copied2">Copied!</label>
         </div>
         <div class="row">
             <input type="text" id="field_sp2"class="form-control-default col-sm-12" readonly=True onclick="copyToClipboard(this.id)"
             value="/mnt/ala/mav/2019/wip/s119/assets/$ASSET_TYPE/$ASSET_NAME/surfacing/textures/$NAME/substancePainter/build/$VERSION">
-            
-
-            <!--<button onclick="copy('field_sp2')">copy</button>-->
         </div>
+
         <div class="row row-label" >
-                <h5>KATANA - Import textures</h5>
-                <label class="notcopied" id="copied3">Copied!</label>
+            <h5>KATANA - Import textures</h5>
+            <label class="notcopied" id="copied3">Copied!</label>
         </div>
         <div class="row">    
             <input type="text" id="field_katana1" class="form-control-default col-sm-12" readonly=True onclick="copyToClipboard(this.id)"
             value="/mnt/ala/mav/2019/wip/s119/assets/$ASSET_TYPE/$ASSET_NAME/surfacing/textures/$NAME/substancePainter/build/$VERSION">
-
         </div>  
 
         <div class="row row-label" >
@@ -94,7 +118,6 @@
         <div class="row">    
             <input type="text" id="field_katana2" class="form-control-default col-sm-12" readonly=True onclick="copyToClipboard(this.id)"
             value="/mnt/ala/mav/2019/jobs/s119/assets/$ASSET_TYPE/$ASSET_NAME/model/model/caches/usd">
-
         </div>
 
         <div class="row row-label" >
@@ -104,28 +127,11 @@
         <div class="row">    
             <input type="text" id="field_rv1" class="form-control-default col-sm-12" readonly=True onclick="copyToClipboard(this.id)"
             value="/mnt/ala/mav/2019/wip/s119/assets/$ASSET_TYPE/$ASSET_NAME/surfacing/lookfiles/$NAME/katana/renders/default/$VERSION/primary/beauty/1920x1080/acescg/exr">
-            
-
         </div>
         
     </div>
     
     
-    
-<!--
-    <div class="row text-left">
-       
-        <div class="col-sm">
-            <table id="links" style="width: 70%">
-                <tr><td>/mnt/ala/mav/2019/jobs/s119/assets/setPiece/<b>${asset}</b>/model/model/caches/abc</td></tr>
-                <tr><td>/mnt/ala/mav/2019/wip/s119/assets/setPiece/<b>${asset}</b>/surfacing/textures/<b>${name}</b>/substancePainter/build/<b>${version}</b></tr></td>
-                <tr><td>/mnt/ala/mav/2019/wip/s119/assets/setPiece/<b>${asset}</b>b/surfacing/textures/<b>${name}</b>/substancePainter/build/<b>${version}</b></tr></td>
-                <tr><td>/mnt/ala/mav/2019/wip/s119/assets/setPiece/<b>${asset}</b>/surfacing/lookfiles/<b>${name}</b>/katana/renders/default/<b>${version}</b>/primary/beauty/1920x1080/acescg/exr</tr></td>
-            </table>
-        </div>
-
-    </div>
--->
 
 
     <script src="js/scripts.js"></script>

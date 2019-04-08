@@ -35,6 +35,10 @@ input[readonly]:hover{
 
 }
 
+.nav-item{
+     color:white;
+}
+
 .notcopied{
     font-weight: bold;
     color: white;

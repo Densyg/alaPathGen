@@ -1,0 +1,111 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+
+    <title>Surfacing PathGenerator</title>
+    <meta name="description" content="To help with your surfacing workflow">
+    <meta name="author" content="Naomi Que">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="css/styles.css">
+</head>
+
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="#">ALA Path Gen</a>
+        <p id="test" style="color:rgb(16, 204, 204);padding-right: 20px">BETA</p>       
+        <div class="mr-sm-2"></div>
+        
+        
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+            <li class="nav-item active mr-sm-4">
+                <a class="nav-link" href="#">Surfacing <span class="sr-only">(current)</span></a>
+            </li>
+            
+            <li class="nav-item dropdown mr-sm-4">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    R&D
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="#">Turret2Path</a>
+                </div>
+            </li>
+            <li class="nav-item mr-sm-4">
+                    <a class="nav-link" href="#">Misc. </a>
+            </li>
+        </div>
+    </nav>
+
+
+    <div class="container">
+        <!-- Title -->
+        <div class="row" id="row0">
+            <h1 class="title mx-auto">turret2path</h1>
+            
+                     
+        </div>
+        <div class="row" id="row1">
+            <p class="mx-auto">Type required filepath or tank query in corresponding fields below:</p>
+        </div>
+
+
+        <!-- Output Fields -->
+         <div class="row row-label" >
+            <h5>set-up</h5>
+            <label class="notcopied" id="copied1">Copied!</label>
+        </div>
+        <div class="row">
+            <input type="text" id="turret0" class="form-control-default col-sm-3" readonly=True onclick="copyToClipboard(this.id)"
+            value="rez-env turret_resolver">
+        </div>
+
+        <div class="row row-label" >
+            <h5>path2turret</h5>
+            <label class="notcopied" id="copied2">Copied!</label>
+        </div>
+        <div class="form-group-row">
+            <label class="label-default col-form-label col-sm-2" for="inlineFormInputFilepath">Filepath:</label>
+            <div>
+                <input type="text" class="form-control mb-4 mr-sm-12" id="turret_path" onkeyup="populate()" placeholder="">
+            </div>
+            </div>
+        <div class="row">
+            <input type="text" id="field_turret1"class="form-control-default col-sm-12" readonly=True onclick="copyToClipboard(this.id)"
+            value="python -c &#34;from turret import resolver; print resolver.filepath_to_uri('$FILEPATH')&#34;">
+        </div>
+        
+        <div class="row row-label" >
+                <h5>turret2path</h5>
+                <label class="notcopied" id="copied3">Copied!</label>
+            </div>
+            <div class="form-group-row">
+                <label class="label-default col-form-label col-sm-2" for="inlineFormInputTankQuery">Tank Query:</label>
+                <div>
+                    <input type="text" class="form-control mb-4 mr-sm-12" id="turret_uri" onkeyup="populate()" placeholder="">
+                </div>
+            </div>
+            <div class="row">
+                
+                <input type="text" id="field_turret2"class="form-control-default col-sm-12" readonly=True onclick="copyToClipboard(this.id)"
+                value="python -c &#34;from turret import resolver; print resolver.uri_to_filepath('$TANK_QUERY')&#34;">
+            </div>
+    </div>
+    
+    
+
+
+    <script src="js/scripts.js"></script>
+    <!-- Bootstrap scripts-->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+</body>
+</html>
