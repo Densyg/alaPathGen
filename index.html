@@ -34,7 +34,7 @@
             </div>
             <div class="col-sm-4">
                 <label class="label-default" for="inlineFormInputAsset2">Asset Name:</label>
-                <input type="text" class="form-control mb-2 mr-sm-2" id="asset" onkeyup="populate()" placeholder="groundRock69">
+                <input type="text" class="form-control mb-2 mr-sm-2" id="assetName" onkeyup="populate()" placeholder="groundRock69">
         
             </div>
             <div class="col-sm-2">
@@ -62,7 +62,7 @@
         </div>
         <div class="row">
             <input type="text" id="field_sp1" class="form-control-default col-sm-12" readonly=True onclick="copyToClipboard(this.id)"
-            value="/mnt/ala/mav/2019/jobs/s119/assets/$ASSET_TYPE/$ASSET/model/model/caches/abc">
+            value="/mnt/ala/mav/2019/jobs/s119/assets/$ASSET_TYPE/$ASSET_NAME/model/model/caches/abc">
             
 
         </div>
@@ -72,7 +72,7 @@
         </div>
         <div class="row">
             <input type="text" id="field_sp2"class="form-control-default col-sm-12" readonly=True onclick="copyToClipboard(this.id)"
-            value="/mnt/ala/mav/2019/wip/s119/assets/$ASSET_TYPE/$ASSET/surfacing/textures/$NAME/substancePainter/build/$VERSION">
+            value="/mnt/ala/mav/2019/wip/s119/assets/$ASSET_TYPE/$ASSET_NAME/surfacing/textures/$NAME/substancePainter/build/$VERSION">
             
 
             <!--<button onclick="copy('field_sp2')">copy</button>-->
@@ -83,18 +83,27 @@
         </div>
         <div class="row">    
             <input type="text" id="field_katana1" class="form-control-default col-sm-12" readonly=True onclick="copyToClipboard(this.id)"
-            value="/mnt/ala/mav/2019/wip/s119/assets/$ASSET_TYPE/$ASSET/surfacing/textures/$NAME/substancePainter/build/$VERSION">
-            
-
+            value="/mnt/ala/mav/2019/wip/s119/assets/$ASSET_TYPE/$ASSET_NAME/surfacing/textures/$NAME/substancePainter/build/$VERSION">
 
         </div>  
+
         <div class="row row-label" >
-                <h5>RV - Open render</h5>
+                <h5>KATANA - Open USD</h5>
                 <label class="notcopied" id="copied4">Copied!</label>
         </div>
         <div class="row">    
+            <input type="text" id="field_katana2" class="form-control-default col-sm-12" readonly=True onclick="copyToClipboard(this.id)"
+            value="/mnt/ala/mav/2019/jobs/s119/assets/$ASSET_TYPE/$ASSET_NAME/model/model/caches/usd">
+
+        </div>
+
+        <div class="row row-label" >
+                <h5>RV - Open render</h5>
+                <label class="notcopied" id="copied5">Copied!</label>
+        </div>
+        <div class="row">    
             <input type="text" id="field_rv1" class="form-control-default col-sm-12" readonly=True onclick="copyToClipboard(this.id)"
-            value="/mnt/ala/mav/2019/wip/s119/assets/$ASSET_TYPE/$ASSET/surfacing/lookfiles/$NAME/katana/renders/default/$VERSION/primary/beauty/1920x1080/acescg/exr">
+            value="/mnt/ala/mav/2019/wip/s119/assets/$ASSET_TYPE/$ASSET_NAME/surfacing/lookfiles/$NAME/katana/renders/default/$VERSION/primary/beauty/1920x1080/acescg/exr">
             
 
         </div>
