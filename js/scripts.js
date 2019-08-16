@@ -1,6 +1,6 @@
 var pathNames = ['/mnt/ala/mav/2019/jobs/s119/assets/setPiece/$ASSET/model/model/caches/abc',
-            '/mnt/ala/mav/2019/wip/s119/assets/setPiece/$ASSET/surfacing/textures/naomi.que/substancePainter/build/$VERSION',
-            '/mnt/ala/mav/2019/wip/s119/assets/setPiece/$ASSET/surfacing/textures/naomi.que/substancePainter/build/$VERSION',
+            '/mnt/ala/mav/2019/wip/s119/assets/setPiece/$ASSET/surfacing/textures/naomi.que/substancePainter/build/export/$VERSION',
+            '/mnt/ala/mav/2019/wip/s119/assets/setPiece/$ASSET/surfacing/textures/naomi.que/substancePainter/build/export/$VERSION',
             '/mnt/ala/mav/2019/wip/s119/assets/setPiece/$ASSET/surfacing/lookfiles/naomi.que/katana/renders/default/$VERSION/primary/beauty/1920x1080/acescg/exr'];
 
 function hello() {
