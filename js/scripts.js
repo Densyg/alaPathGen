@@ -1,8 +1,3 @@
-var pathNames = ['/mnt/ala/mav/2019/jobs/s119/assets/setPiece/$ASSET/model/model/caches/abc',
-            '/mnt/ala/mav/2019/wip/s119/assets/setPiece/$ASSET/surfacing/textures/naomi.que/substancePainter/build/export/$VERSION',
-            '/mnt/ala/mav/2019/wip/s119/assets/setPiece/$ASSET/surfacing/textures/naomi.que/substancePainter/build/export/$VERSION',
-            '/mnt/ala/mav/2019/wip/s119/assets/setPiece/$ASSET/surfacing/lookfiles/naomi.que/katana/renders/default/$VERSION/primary/beauty/1920x1080/acescg/exr'];
-
 function hello() {
     var links = document.getElementById('links');
     links.innerHTML = 'Hello it is I, js';
@@ -78,8 +73,8 @@ function populate() {
     }
     var str = "";
     var spImport = `/mnt/ala/mav/2019/jobs/s119/assets/${assetType}/${assetName}/model/model/caches/abc`;
-    var spExport = `/mnt/ala/mav/2019/wip/s119/assets/${assetType}/${assetName}/surfacing/textures/${name}/substancePainter/build/${version}`;
-    var katanaExport = `/mnt/ala/mav/2019/wip/s119/assets/${assetType}/${assetName}/surfacing/textures/${name}/substancePainter/build/${version}`;
+    var spExport = `/mnt/ala/mav/2019/wip/s119/assets/${assetType}/${assetName}/surfacing/textures/${name}/substancePainter/build/export/${version}`;
+    var katanaExport = `/mnt/ala/mav/2019/wip/s119/assets/${assetType}/${assetName}/surfacing/textures/${name}/substancePainter/build/export/${version}`;
     var katanaUsdOpen = `/mnt/ala/mav/2019/jobs/s119/assets/${assetType}/${assetName}/model/model/caches/usd`;
     var rvOpen = `/mnt/ala/mav/2019/wip/s119/assets/${assetType}/${assetName}/surfacing/lookfiles/${name}/katana/renders/default/${version}/primary/beauty/1920x1080/acescg/exr`;
 
