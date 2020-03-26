@@ -72,11 +72,11 @@ function populate() {
         version='$VERSION';
     }
     var str = "";
-    var spImport = `/mnt/ala/mav/2019/jobs/s119/assets/${assetType}/${assetName}/model/model/caches/abc`;
-    var spExport = `/mnt/ala/mav/2019/wip/s119/assets/${assetType}/${assetName}/surfacing/textures/${name}/substancePainter/build/export/${version}`;
-    var katanaExport = `/mnt/ala/mav/2019/wip/s119/assets/${assetType}/${assetName}/surfacing/textures/${name}/substancePainter/build/export/${version}`;
-    var katanaUsdOpen = `/mnt/ala/mav/2019/jobs/s119/assets/${assetType}/${assetName}/model/model/caches/usd`;
-    var rvOpen = `/mnt/ala/mav/2019/wip/s119/assets/${assetType}/${assetName}/surfacing/lookfiles/${name}/katana/renders/default/${version}/primary/beauty/1920x1080/acescg/exr`;
+    var spImport = `/mnt/ala/mav/2020/jobs/s120/assets/${assetType}/${assetName}/model/model/caches/abc`;
+    var spExport = `/mnt/ala/mav/2020/wip/s120/assets/${assetType}/${assetName}/surfacing/textures/${name}/substancePainter/build/export/${version}`;
+    var katanaExport = `/mnt/ala/mav/2020/wip/s120/assets/${assetType}/${assetName}/surfacing/textures/${name}/substancePainter/build/export/${version}`;
+    var katanaUsdOpen = `/mnt/ala/mav/2020/jobs/s120/assets/${assetType}/${assetName}/model/model/caches/usd`;
+    var rvOpen = `/mnt/ala/mav/2020/wip/s120/assets/${assetType}/${assetName}/surfacing/lookfiles/${name}/katana/renders/default/${version}/primary/beauty/1920x1080/acescg/exr`;
 
 
     //links.innerHTML = `${asset}`;
