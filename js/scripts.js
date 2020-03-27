@@ -46,6 +46,7 @@ function populate() {
     var assetName=document.getElementById('assetName').value;
     var assetType=document.getElementById('assetType').value;
     var version=document.getElementById('version').value;
+    var submaterial=document.getElementById('submaterial').value;
     var links=document.getElementById('links');
     var field_sp1 = document.getElementById('field_sp1');
     var field_sp2 = document.getElementById('field_sp2');
@@ -78,6 +79,10 @@ function populate() {
     var katanaUsdOpen = `/mnt/ala/mav/2020/jobs/s120/assets/${assetType}/${assetName}/model/model/caches/usd`;
     var rvOpen = `/mnt/ala/mav/2020/wip/s120/assets/${assetType}/${assetName}/surfacing/lookfiles/${name}/katana/renders/default/${version}/primary/beauty/1920x1080/acescg/exr`;
 
+    if (submaterial !== '') {
+        var spExport = `/mnt/ala/mav/2020/wip/s120/assets/${assetType}/${assetName}/surfacing/textures/${name}/substancePainter/build/export/${submaterial}/${version}`;
+        var katanaExport = `/mnt/ala/mav/2020/wip/s120/assets/${assetType}/${assetName}/surfacing/textures/${name}/substancePainter/build/export/${submaterial}/${version}`;
+    }
 
     //links.innerHTML = `${asset}`;
     field_sp1.value = spImport;
