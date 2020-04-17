@@ -24,6 +24,7 @@ const copyToClipboard = id => {
     else if (id === "field_katana1") label = 'copied3';
     else if (id === "field_katana2") label = 'copied4';
     else if (id === "field_rv1") label = 'copied5';
+    else if (id === "field_publish1") label = 'copied6';
 
     var copyLabel = document.getElementById(label);
     copyLabel.className = "copied";
@@ -47,19 +48,19 @@ function populate() {
     var assetType=document.getElementById('assetType').value;
     var version=document.getElementById('version').value;
     var submaterial=document.getElementById('submaterial').value;
-    var links=document.getElementById('links');
+    var links=document.getElementById('links'); // Is this still being used?
     var field_sp1 = document.getElementById('field_sp1');
     var field_sp2 = document.getElementById('field_sp2');
-    var field_katana1=document.getElementById('field_katana1');
     var field_katana2=document.getElementById('field_katana2');
     var field_rv1=document.getElementById('field_rv1');
+    var field_publish1=document.getElementById('field_publish1');
 
     // Unlock field
     field_sp1.readonly = false;
     field_sp2.readonly = false;
-    field_katana1.readonly = false;
     field_katana2.readonly = false;
     field_rv1.readonly = false;
+    field_publish1.readonly = false;
     if (name === '') {
         name='$AUTHOR';
     }
@@ -72,24 +73,22 @@ function populate() {
     if (version === '') {
         version='$VERSION';
     }
+    if (submaterial === '') {
+        submaterial='defaultMaterial';
+    }
     var str = "";
     var spImport = `/mnt/ala/mav/2020/jobs/s120/assets/${assetType}/${assetName}/model/model/caches/abc`;
-    var spExport = `/mnt/ala/mav/2020/wip/s120/assets/${assetType}/${assetName}/surfacing/textures/${name}/substancePainter/build/export/${version}`;
-    var katanaExport = `/mnt/ala/mav/2020/wip/s120/assets/${assetType}/${assetName}/surfacing/textures/${name}/substancePainter/build/export/${version}`;
+    var spExport = `/mnt/ala/mav/2020/wip/s120/assets/${assetType}/${assetName}/surfacing/textures/${name}/katana/textures/${submaterial}`;
     var katanaUsdOpen = `/mnt/ala/mav/2020/jobs/s120/assets/${assetType}/${assetName}/model/model/caches/usd`;
-    var rvOpen = `/mnt/ala/mav/2020/wip/s120/assets/${assetType}/${assetName}/surfacing/lookfiles/${name}/katana/renders/default/${version}/primary/beauty/1920x1080/acescg/exr`;
-
-    if (submaterial !== '') {
-        var spExport = `/mnt/ala/mav/2020/wip/s120/assets/${assetType}/${assetName}/surfacing/textures/${name}/substancePainter/build/export/${submaterial}/${version}`;
-        var katanaExport = `/mnt/ala/mav/2020/wip/s120/assets/${assetType}/${assetName}/surfacing/textures/${name}/substancePainter/build/export/${submaterial}/${version}`;
-    }
+    var rvOpen = `/mnt/ala/mav/2020/wip/s120/assets/${assetType}/${assetName}/surfacing/textures/${name}/katana/renders/default/${version}/primary/beauty/1920x1080/acescg/exr`;
+    var publish1 = `/mnt/ala/mav/2020/jobs/s120/assets/${assetType}/${assetName}/surfacing/textures/material/${submaterial}/${version}`;
 
     //links.innerHTML = `${asset}`;
     field_sp1.value = spImport;
     field_sp2.value = spExport;
-    field_katana1.value = katanaExport;
     field_katana2.value = katanaUsdOpen;
     field_rv1.value = rvOpen;
+    field_publish1.value = publish1;
 
     //document.body.appendChild(form);
 }
