@@ -48,6 +48,8 @@ function populate() {
     var assetType=document.getElementById('assetType').value;
     var version=document.getElementById('version').value;
     var submaterial=document.getElementById('submaterial').value;
+    var year=document.getElementById('year').value;
+    var studioCode=document.getElementById('studioCode').value;
     var links=document.getElementById('links'); // Is this still being used?
     var field_sp1 = document.getElementById('field_sp1');
     var field_sp2 = document.getElementById('field_sp2');
@@ -77,11 +79,11 @@ function populate() {
         submaterial='defaultMaterial';
     }
     var str = "";
-    var spImport = `/mnt/ala/mav/2020/jobs/s120/assets/${assetType}/${assetName}/model/model/caches/abc`;
-    var spExport = `/mnt/ala/mav/2020/wip/s120/assets/${assetType}/${assetName}/surfacing/textures/${name}/katana/textures/${submaterial}`;
-    var katanaUsdOpen = `/mnt/ala/mav/2020/jobs/s120/assets/${assetType}/${assetName}/model/model/caches/usd`;
-    var rvOpen = `/mnt/ala/mav/2020/wip/s120/assets/${assetType}/${assetName}/surfacing/textures/${name}/katana/renders/default/${version}/primary/beauty/1920x1080/acescg/exr`;
-    var publish1 = `/mnt/ala/mav/2020/jobs/s120/assets/${assetType}/${assetName}/surfacing/textures/material/${submaterial}/${version}`;
+    var spImport = `/mnt/ala/mav/${year}/jobs/${studioCode}/assets/${assetType}/${assetName}/model/model/caches/abc`;
+    var spExport = `/mnt/ala/mav/${year}/wip/${studioCode}/assets/${assetType}/${assetName}/surfacing/surfacing/${name}/katana/textures/${submaterial}`;
+    var katanaUsdOpen = `/mnt/ala/mav/${year}/jobs/${studioCode}/assets/${assetType}/${assetName}/model/model/caches/usd`;
+    var rvOpen = `/mnt/ala/mav/${year}/wip/${studioCode}/assets/${assetType}/${assetName}/surfacing/surfacing/${name}/katana/renders/default/${version}/primary/beauty/1920x1080/acescg/exr`;
+    var publish1 = `/mnt/ala/mav/${year}/jobs/${studioCode}/assets/${assetType}/${assetName}/surfacing/surfacing/material/${submaterial}/${version}`;
 
     //links.innerHTML = `${asset}`;
     field_sp1.value = spImport;

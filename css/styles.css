@@ -22,6 +22,10 @@ label{
     margin: 20px 0px 0px 0px;
 }
 
+#input-group2{
+    margin: 20px 0px 0px 0px;
+}
+
 input[readonly]{
     background-color: rgb(252, 252, 252);
     border-radius: 3px;

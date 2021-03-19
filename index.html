@@ -57,17 +57,34 @@
 
         </div>        
         <div class="row" id="input-group">
+        </div>
+
+        
+        <div class="row">
+            <div class="col-sm-2">
+                <label class="label-default" for="inlineFormInputAssetType  2">Year:</label>
+                <input type="text" class="form-control mb-2 mr-sm-2" id="year" onkeyup="populate()" placeholder="2021">
+            
+            </div>
+            <div class="col-sm-2">
+                <label class="label-default" for="inlineFormInputName2">Studio Code:</label>
+                <input type="text" class="form-control mb-2 mr-sm-2" id="studioCode" onkeyup="populate()" placeholder="s121">
+            </div>
+
+
+        </div>        
+        <div class="row">       
+        </div>
             
         
 
-        </div>
         <div class="row row-label" >
                 <h5>SUBSTANCE PAINTER - Open model</h5>
                 <label class="notcopied" id="copied1">Copied!</label>
         </div>
         <div class="row">
             <input type="text" id="field_sp1" class="form-control-default col-sm-12" readonly=True onclick="copyToClipboard(this.id)"
-            value="/mnt/ala/mav/2020/jobs/s120/assets/$ASSET_TYPE/$ASSET_NAME/model/model/caches/abc">
+            value="/mnt/ala/mav/$YEAR/jobs/$STUDIO_CODE/assets/$ASSET_TYPE/$ASSET_NAME/model/model/caches/abc">
             
 
         </div>
@@ -77,7 +94,7 @@
         </div>
         <div class="row">
             <input type="text" id="field_sp2"class="form-control-default col-sm-12" readonly=True onclick="copyToClipboard(this.id)"
-            value="/mnt/ala/mav/2020/wip/s120/assets/$ASSET_TYPE/$ASSET_NAME/surfacing/textures/$NAME/katana/textures/defaultMaterial">
+            value="/mnt/ala/mav/$YEAR/wip/$STUDIO_CODE/assets/$ASSET_TYPE/$ASSET_NAME/surfacing/textures/$NAME/katana/textures/defaultMaterial">
             
 
             <!--<button onclick="copy('field_sp2')">copy</button>-->
@@ -89,7 +106,7 @@
         </div>
         <div class="row">    
             <input type="text" id="field_katana2" class="form-control-default col-sm-12" readonly=True onclick="copyToClipboard(this.id)"
-            value="/mnt/ala/mav/2020/jobs/s120/assets/$ASSET_TYPE/$ASSET_NAME/model/model/caches/usd">
+            value="/mnt/ala/mav/$YEAR/jobs/$STUDIO_CODE/assets/$ASSET_TYPE/$ASSET_NAME/model/model/caches/usd">
 
         </div>
 
@@ -99,19 +116,19 @@
         </div>
         <div class="row">    
             <input type="text" id="field_rv1" class="form-control-default col-sm-12" readonly=True onclick="copyToClipboard(this.id)"
-            value="/mnt/ala/mav/2020/wip/s120/assets/$ASSET_TYPE/$ASSET_NAME/surfacing/lookfiles/$NAME/katana/renders/default/$VERSION/primary/beauty/1920x1080/acescg/exr">
+            value="/mnt/ala/mav/$YEAR/wip/$STUDIO_CODE/assets/$ASSET_TYPE/$ASSET_NAME/surfacing/lookfiles/$NAME/katana/renders/default/$VERSION/primary/beauty/1920x1080/acescg/exr">
             
 
         </div>
 
         <div class="row row-label" >
             <h5>Published</h5>
-            <label class="notcopied" id="copied5">Copied!</label>
+            <label class="notcopied" id="copied6">Copied!</label>
         </div>
 
         <div class="row">    
             <input type="text" id="field_publish1" class="form-control-default col-sm-12" readonly=True onclick="copyToClipboard(this.id)"
-            value="/mnt/ala/mav/2020/jobs/s120/assets/$ASSET_TYPE/$ASSET_NAME/surfacing/textures/material/defaultMaterial/$VERSION">
+            value="/mnt/ala/mav/$YEAR/jobs/$STUDIO_CODE/assets/$ASSET_TYPE/$ASSET_NAME/surfacing/textures/material/defaultMaterial/$VERSION">
         </div>
     </div>
     
