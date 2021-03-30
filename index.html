@@ -63,12 +63,12 @@
         <div class="row">
             <div class="col-sm-2">
                 <label class="label-default" for="inlineFormInputAssetType  2">Year:</label>
-                <input type="text" class="form-control mb-2 mr-sm-2" id="year" onkeyup="populate()" placeholder="2021">
+                <input type="text" class="form-control mb-2 mr-sm-2" id="year" onkeyup="populate()" placeholder="e.g. 2021">
             
             </div>
             <div class="col-sm-2">
                 <label class="label-default" for="inlineFormInputName2">Studio Code:</label>
-                <input type="text" class="form-control mb-2 mr-sm-2" id="studioCode" onkeyup="populate()" placeholder="s121">
+                <input type="text" class="form-control mb-2 mr-sm-2" id="studioCode" onkeyup="populate()" placeholder="e.g. s121">
             </div>
 
 
@@ -89,15 +89,25 @@
 
         </div>
         <div class="row row-label" >
+                <h5>SUBSTANCE PAINTER - File Save</h5>
+                <label class="notcopied" id="copied7">Copied!</label>
+        </div>
+        <div class="row">
+            <input type="text" id="field_sp2" class="form-control-default col-sm-12" readonly=True onclick="copyToClipboard(this.id)"
+            value="/mnt/ala/mav/$YEAR/wip/$STUDIO_CODE/assets/$ASSET_TYPE/$ASSET_NAME/surfacing/textures/$NAME/substancePainter/build">
+            
+
+        </div>
+        <div class="row row-label" >
                 <h5>SUBSTANCE PAINTER / KATANA - Export textures</h5>
                 <label class="notcopied" id="copied2">Copied!</label>
         </div>
         <div class="row">
-            <input type="text" id="field_sp2"class="form-control-default col-sm-12" readonly=True onclick="copyToClipboard(this.id)"
+            <input type="text" id="field_sp3"class="form-control-default col-sm-12" readonly=True onclick="copyToClipboard(this.id)"
             value="/mnt/ala/mav/$YEAR/wip/$STUDIO_CODE/assets/$ASSET_TYPE/$ASSET_NAME/surfacing/textures/$NAME/katana/textures/defaultMaterial">
             
 
-            <!--<button onclick="copy('field_sp2')">copy</button>-->
+            <!--<button onclick="copy('field_sp3')">copy</button>-->
         </div>
 
         <div class="row row-label" >
