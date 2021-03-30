@@ -79,7 +79,7 @@ function populate() {
         submaterial='defaultMaterial';
     }
     var str = "";
-    var spImport = `/mnt/ala/mav/${year}/jobs/${studioCode}/assets/${assetType}/${assetName}/model/model/caches/abc`;
+    var spImport = `/mnt/ala/mav/${year}/jobs/${studioCode}/assets/${assetType}/${assetName}/model/model/caches/fbx`;
     var spExport = `/mnt/ala/mav/${year}/wip/${studioCode}/assets/${assetType}/${assetName}/surfacing/surfacing/${name}/katana/textures/${submaterial}`;
     var katanaUsdOpen = `/mnt/ala/mav/${year}/jobs/${studioCode}/assets/${assetType}/${assetName}/model/model/caches/usd`;
     var rvOpen = `/mnt/ala/mav/${year}/wip/${studioCode}/assets/${assetType}/${assetName}/surfacing/surfacing/${name}/katana/renders/default/${version}/primary/beauty/1920x1080/acescg/exr`;
